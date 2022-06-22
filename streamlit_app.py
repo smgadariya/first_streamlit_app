@@ -7,7 +7,6 @@ streamlit.text('Omega 3 and Blueberry Oatmeal')
 streamlit.text('Kale, Spinach & Rocket Smothie')
 streamlit.text('Hard-Boiled Free-Range Egg')
 
-import pandashttps://github.com/smgadariya/first_streamlit_app/blob/main/streamlit_app.py
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 my_fruit_list = my_fruit_list.set_index('Fruit')
 
@@ -18,7 +17,9 @@ streamlit.dataframe(fruits_to_show)
 
 
 streamlit.header('Fruityvice fruit advice!')
+
 import requests
+
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 streamlit.text(fruityvice_response).json()
 
